@@ -1,3 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+
+:root {
+  --rouge: #ff5151;
+  --violet-clair: #363687;
+  --violet: #363687;
+  --violet-fonce: #363687;
+}
+@font-face {
+  font-family: "Neuzeit Regular";
+  src: url("/@global/fonts/Neuzeit-Regular.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Neuzeit Bold";
+  src: url("/@global/fonts/Neuzeit-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Mikado Black";
+  src: url("/@global/fonts/MikadoBlack.otf");
+}
+
+@font-face {
+  font-family: "Mikado Bold";
+  src: url("/@global/fonts/MikadoBold.otf");
+}
+
+html {
+  min-height: 100vh;
+}
+
 body {
-    background-color: aquamarine;
+  font-family: "Neuzeit Regular", sans-serif;
+  font-optical-sizing: auto;
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+main {
+  position: relative;
+  min-height: 100vh;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  position: relative;
+  padding: 20px;
+}
+
+.logo {
+  color: #ff5151;
+  width: fit-content;
+  margin: 0;
+  font-family: Mikado Bold;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: linear-gradient(130deg,rgba(83, 86, 237, 1) 1%, rgba(209, 210, 250, 1) 29%, rgba(255, 255, 255, 1) 69%, rgba(255, 0, 0, 1) 100%);
+    position: relative;
+    z-index: 100;
+  }
+
+thead th:first-child{
+    text-align: left;
+    color:white;
+}
+
+thead th{
+  text-align: center;
+}
+
+thead th{
+  padding: 15px;
+  border: 1px solid rgb(23, 21, 38);
+}
+
+td{
+  padding: 15px;
+  border: 1px solid rgb(23, 21, 38);
+}
+
+td:not(:first-child){
+  text-align: center;
+}
+
+td p{
+    margin: inherit;
+}
+
+.song{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.artist{
+    margin-top: 8px;
+}
+
+button{
+  background-color: #363687;
+  color:#ff5151;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: none;
+  border: none;
+  transition: 0.2s ease-in-out all;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #4949ac;
+}
+
+/*-- Audio player --*/
+.custom-audio-player {
+  display: flex;
+  margin:50px auto 90px auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  padding: 50px 100px 50px 10px;
+  width: fit-content;
+  border: 4px solid var(--violet-clair);
+  position: relative;
+}
+
+.custom-audio-player::before {
+  content: "";
+  display: block;
+  height: 120%;
+  background-color: #fff;
+  width: 150px;
+  position: absolute;
+  left: -10px;
+  top: 0;
+  z-index: 100;
+}
+
+.custom-audio-player p,
+.custom-audio-player h1 {
+  margin: 0;
+  max-width: 780px;
+  text-align: center;
+  position: relative;
+  z-index: 200;
+}
+
+.cover {
+  color: var(--violet);
+  font-family: "Neuzeit Bold";
+  letter-spacing: -1.5px;
+  margin: 0;
+}
+
+.original {
+  color: var(--violet-fonce);
+  font-size: 1.5em;
+  margin: 0;
+}
+
+#seek-bar {
+  flex: 2;
+  width: 600px;
+  z-index: 1000;
+  background: #6652c6;
+  height: 3px;
+}
+
+input[type="range"] {
+  background: #b0b0c0;
+  /* -webkit-appearance: none; */
+  border-radius: 5%;
+  position: relative;
+  z-index: 200;
+}
+
+input[type="range"]::-moz-range-track {
+  background: var(--violet-clair);
+  height: 2px;
+  border-radius: 5px;
+}
+
+#play-btn {
+  background-color: transparent;
+  color: var(--violet);
+  font-size: 80px;
+  line-height: 1em;
+  border: none;
+  cursor: pointer;
 }

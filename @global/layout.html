@@ -1,10 +1,36 @@
 <header>
-  <h1><a href="/">Pardon My French</a></h1>
+  <h1 class="logo"><a href="/">Pardon My French</a></h1>
+  <img src="/@global/img/bandeauHaut.gif">
 </header>
 
 <main>
   <slot for="content" />
+  <songs-list :songs="songs">
 </main>
 
 <footer>
+
+  <script type="text/javascript">
+    const audio = document.getElementById('audio');
+      const playBtn = document.getElementById('play-btn');
+      const seekBar = document.getElementById('seek-bar');
+
+      playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+          audio.play();
+          playBtn.textContent = '⏸';
+        } else {
+          audio.pause();
+          playBtn.textContent = '▶';
+        }
+      });
+
+      audio.addEventListener('timeupdate', () => {
+        seekBar.value = (audio.currentTime / audio.duration) * 100;
+      });
+      seekBar.addEventListener('input', () => {
+        audio.currentTime = (seekBar.value / 100) * audio.duration;
+      });
+  </script>
 </footer>
+

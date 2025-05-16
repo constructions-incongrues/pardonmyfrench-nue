@@ -14,6 +14,7 @@ author: Pardon My French
 favicon: /img/favicon.jpg
 description: Projet Collaboratif Incongru - BAISE OUAIS ! 24/24 NON ARRETE PARTIE !
 port: 8083
+content_collection: songs
 
 # OG image
 origin: https://www.pardon-my-french.fr

@@ -1,13 +1,13 @@
 <main>
-    <article>
-        <h1>
-            { authors } - { title } ({ original_artist })
+    <div class="custom-audio-player">
+        <h1 class="cover">
+            { authors } - { title }
         </h1>
-    </article>
-    <h1>
-        <audio controls>
-            <source src="{ audio }" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </h1>
+        <p class="original">({ original_artist })</p>
+        <span id="time">00:00</span>
+        <input type="range" id="seek-bar" value="0">
+        <button id="play-btn">▶</button>
+        <audio id="audio" src="{ audio }" type="audio/mpeg"></audio>
+    </div>
+    <songs-list :songs="songs">
 </main>
