@@ -1,0 +1,5 @@
+<ul @name="songs-list">
+    <li :for="song in songs">
+        <a href="/songs/{ song.slug }">{ song.authors } - { song.title } ({ song.original_artist })</a>
+    </li>
+</ul>

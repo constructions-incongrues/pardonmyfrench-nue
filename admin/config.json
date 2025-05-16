@@ -1,0 +1,21 @@
+{
+    "config": {
+      "backend": {
+        "name": "github",
+        "repo": "owner-name/repo-name"
+      },
+      "media_folder": "static/images/uploads",
+      "public_folder": "/images/uploads",
+      "collections": [
+        { "name": "Song",
+           "fields": [
+             { "name": "title", "label": "Title", "widget": "string" },
+             { "name": "artist", "label": "Artist", "widget": "string" },
+             { "name": "album", "label": "Album", "widget": "string" },
+             { "name": "cover", "label": "Cover Image", "widget": "image" },
+             { "name": "audio", "label": "Audio File", "widget": "file" }
+           ]
+         }
+      ]
+    }
+  }

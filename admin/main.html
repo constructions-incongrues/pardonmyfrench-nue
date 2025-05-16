@@ -1,0 +1,32 @@
+<main>
+<head>
+    <script>
+        window.CMS_MANUAL_INIT = true;
+    </script>
+    <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+    <script>
+        const { CMS, initCMS: init } = window;
+        init({
+            config: {
+                backend: {
+                    name: 'github',
+                    repo: 'constructions-incongrues/pardonmyfrench-contents'
+                },
+                editor: {
+                    preview: false
+                },
+                load_config_file: false,
+                media_folder: "static/images/uploads",
+                public_folder: "/images/uploads",
+                collections: [
+                { label: "Chansons", name: "songs", folder: "songs", create: true, fields: [
+                    { label: "Titre", name: "title", widget: "string" },
+                    { label: "Artistes", name: "authors", widget: "string" },
+                    { label: "Artiste original", name: "original_artist", widget: "string" },
+                ]},
+            ],
+        },
+    })
+    </script>
+</head>
+</main>

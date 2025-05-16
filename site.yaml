@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://json.schemastore.org/nuejs-site.json
+
+globals: ["@global"]
+libs: ["@library"]
+
+view_transitions: true
+native_css_nesting: true
+inline_css: true
+sections: true
+
+title: Pardon My French
+title_template: "Pardon My French / %s"
+author: Pardon My French
+favicon: /img/favicon.jpg
+description: Projet Collaboratif Incongru - BAISE OUAIS ! 24/24 NON ARRETE PARTIE !
+port: 8083
+
+# OG image
+origin: https://www.pardon-my-french.fr
+og_image: /img/opengraph.png
